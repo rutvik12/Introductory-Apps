@@ -52,9 +52,17 @@ public class Login extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
                             Toast.makeText(Login.this,"Error!!! "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            pb2.setVisibility(View.GONE);
                         }
                     }
                 });
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Register.class));
             }
         });
 
