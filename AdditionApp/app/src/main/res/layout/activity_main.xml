@@ -83,16 +83,16 @@
 
     <EditText
         android:id="@+id/result"
-        android:layout_width="93dp"
-        android:layout_height="60dp"
+        android:layout_width="96dp"
+        android:layout_height="84dp"
         android:ems="10"
         android:inputType="number"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintHorizontal_bias="0.79"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintVertical_bias="0.71" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
