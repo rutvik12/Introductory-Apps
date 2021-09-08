@@ -62,13 +62,23 @@ public class Register extends AppCompatActivity {
                 String lName = lastName.getText().toString();
                 String phone = phoneNumber.getText().toString();
 
+                if (TextUtils.isEmpty(fName)) {
+                    firstName.setError("Please enter a first name");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(lName)) {
+                    lastName.setError("Please enter a last name");
+                    return;
+                }
+
                 if (TextUtils.isEmpty(email)){
                     emailAddress.setError("Please enter a valid email address");
                     return;
                 }
 
                 if (TextUtils.isEmpty(pass)){
-                    password.setError("Please enter a valid email address");
+                    password.setError("Please enter a valid password");
                     return;
                 }
 
