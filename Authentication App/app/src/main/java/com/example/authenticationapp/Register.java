@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,6 +61,26 @@ public class Register extends AppCompatActivity {
                 String fName = firstName.getText().toString();
                 String lName = lastName.getText().toString();
                 String phone = phoneNumber.getText().toString();
+
+                if (TextUtils.isEmpty(email)){
+                    emailAddress.setError("Please enter a valid email address");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(pass)){
+                    password.setError("Please enter a valid email address");
+                    return;
+                }
+
+                if (pass.length() < 6) {
+                    password.setError("Password can only be >= 6 characters");
+                    return;
+                }
+
+                if (phone.length() != 10) {
+                    phoneNumber.setError("Phone numbers have 10 characters");
+                    return;
+                }
 
                 pb.setVisibility(View.VISIBLE);
 
