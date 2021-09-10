@@ -36,6 +36,7 @@ public class Login extends AppCompatActivity {
         pb2 = findViewById(R.id.progressBar2);
         fAuth = FirebaseAuth.getInstance();
 
+        /*Logs in the user into the app*/
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +45,7 @@ public class Login extends AppCompatActivity {
 
                 pb2.setVisibility(View.VISIBLE);
 
+                /*Matches the user credentials to that stored in database*/
                 fAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -59,6 +61,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        /*Move the user to the registration process view*/
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

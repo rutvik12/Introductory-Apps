@@ -62,6 +62,7 @@ public class Register extends AppCompatActivity {
                 String lName = lastName.getText().toString();
                 String phone = phoneNumber.getText().toString();
 
+                /*Checks for null fields*/
                 if (TextUtils.isEmpty(fName)) {
                     firstName.setError("Please enter a first name");
                     return;
@@ -94,6 +95,7 @@ public class Register extends AppCompatActivity {
 
                 pb.setVisibility(View.VISIBLE);
 
+                /*Create a new user with provided email and password*/
                 fAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -122,6 +124,7 @@ public class Register extends AppCompatActivity {
             }
         });
 
+        /*Moves the user to login activity*/
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
